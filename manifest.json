@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "AI Job Match",
+  "version": "0.1.0",
+  "description": "Score the open job page against your resume and list the skills by priority.",
+  "action": {
+    "default_title": "AI Job Match"
+  },
+  "side_panel": {
+    "default_path": "panel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["sidePanel", "activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1:8000/*"]
+}

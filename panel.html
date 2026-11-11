@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Job Match</title>
+    <link rel="stylesheet" href="panel.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">AI Job Match</p>
+        <h1>Resume against this job</h1>
+      </div>
+      <p id="health" class="health">Checking API</p>
+    </header>
+
+    <form id="form" class="card">
+      <label>
+        Resume
+        <textarea id="resume" name="resume" placeholder="Paste the resume"></textarea>
+      </label>
+      <label class="file">
+        Or upload PDF, DOCX, or TXT
+        <input id="file" name="file" type="file" accept=".pdf,.docx,.txt,application/pdf" />
+      </label>
+      <label>
+        Extra skills
+        <input id="skills" name="skills" type="text" placeholder="PostgreSQL, PyTorch" />
+      </label>
+      <label>
+        Job posting
+        <textarea id="job" name="job" placeholder="Paste the posting, or read the open tab"></textarea>
+      </label>
+      <div class="actions">
+        <button id="read-tab" type="button">Read open tab</button>
+        <button id="score" type="submit">Score</button>
+        <button id="analyze" type="button">Analyze</button>
+      </div>
+      <p id="message" class="message" role="status"></p>
+    </form>
+
+    <section id="match" class="card result" hidden></section>
+    <section id="analysis" class="card result" hidden></section>
+    <script src="panel.js?v=2"></script>
+  </body>
+</html>
